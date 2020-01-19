@@ -484,12 +484,6 @@ To confirm, type /confirm'.format(num,booking[0],booking[1],booking[2])
         return start(update,context)
     updater.dispatcher.add_handler(CommandHandler('confirm',confirm))
     updater.dispatcher.add_handler(CommandHandler('back',back))
-
-def DTF(update,context):
-    keyboard = [[InlineKeyboardButton("Yes", callback_data='1'), InlineKeyboardButton("No", callback_data='2')]]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text('Are you DOWN TO gym near my place? \N{winking face}', reply_markup=reply_markup)
-updater.dispatcher.add_handler(CommandHandler('DTFunction',DTF))
     
 
 
